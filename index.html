@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <link rel="manifest" href="manifest.webmanifest">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -33,13 +34,15 @@
 	<script src="inputmanager.js" crossorigin="anonymous"></script>
 	<script src="jsonmanager.js" crossorigin="anonymous"></script>
 	<script src="timemanager.js" crossorigin="anonymous"></script>
+	<script src="polygon.js" crossorigin="anonymous"></script>
 	<script src="runtimeobject.js" crossorigin="anonymous"></script>
 	<script src="profiler.js" crossorigin="anonymous"></script>
+	<script src="RuntimeInstanceContainer.js" crossorigin="anonymous"></script>
 	<script src="runtimescene.js" crossorigin="anonymous"></script>
 	<script src="scenestack.js" crossorigin="anonymous"></script>
-	<script src="polygon.js" crossorigin="anonymous"></script>
 	<script src="force.js" crossorigin="anonymous"></script>
 	<script src="layer.js" crossorigin="anonymous"></script>
+	<script src="RuntimeSceneLayer.js" crossorigin="anonymous"></script>
 	<script src="timer.js" crossorigin="anonymous"></script>
 	<script src="runtimegame.js" crossorigin="anonymous"></script>
 	<script src="variable.js" crossorigin="anonymous"></script>
@@ -47,6 +50,9 @@
 	<script src="oncetriggers.js" crossorigin="anonymous"></script>
 	<script src="runtimebehavior.js" crossorigin="anonymous"></script>
 	<script src="spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="affinetransformation.js" crossorigin="anonymous"></script>
+	<script src="CustomRuntimeObjectInstanceContainer.js" crossorigin="anonymous"></script>
+	<script src="CustomRuntimeObject.js" crossorigin="anonymous"></script>
 	<script src="events-tools/commontools.js" crossorigin="anonymous"></script>
 	<script src="events-tools/variabletools.js" crossorigin="anonymous"></script>
 	<script src="events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
@@ -67,28 +73,33 @@
 	<script src="pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/CustomObjectPixiRenderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/DebuggerPixiRenderer.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/pixi-effects-manager.js" crossorigin="anonymous"></script>
 	<script src="howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
 	<script src="howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
 	<script src="fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
 	<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformtools.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/DraggableBehavior/draggableruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightobstacleruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PathfindingBehavior/pathfindingruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PathfindingBehavior/pathfindingobstacleruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/BBText/bbtextruntimeobject.js" crossorigin="anonymous"></script>
 	<script src="Extensions/BBText/bbtextruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="Extensions/BBText/bbtextruntimeobject.js" crossorigin="anonymous"></script>
 	<script src="Extensions/BBText/pixi-multistyle-text/dist/pixi-multistyle-text.umd.js" crossorigin="anonymous"></script>
+	<script src="Extensions/DraggableBehavior/draggableruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/Lighting/lightobstacleruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/Lighting/lightruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="Extensions/Lighting/lightruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PathfindingBehavior/PathTools.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PathfindingBehavior/pathfindingobstacleruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PathfindingBehavior/pathfindingruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PlatformBehavior/platformtools.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TweenBehavior/shifty_setup.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="gdjs-evtsext__platformertrajectory__platformerevaluator.js" crossorigin="anonymous"></script>
 	<script src="code0.js" crossorigin="anonymous"></script>
 	<script src="code1.js" crossorigin="anonymous"></script>
 	<script src="code2.js" crossorigin="anonymous"></script>
@@ -129,5 +140,6 @@
     })();
 
 	</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"7888dbaafa9a7e46","token":"c18f780cd91744be917cacf5071242dd","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "name": "Prose Platformer",
+  "short_name": "Prose Platformer",
+  "id": "com.zytrusdev.proseplatformer",
+  "description": "Well. Look who thinks they're ready to play. (Spoiler: you aren't) But maybe you could, by some slim chance, not irreparably mess everything up. Just follow the rules, and don't break your computer. (PS: if you do, we're not responsible)",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}

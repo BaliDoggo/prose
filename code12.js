@@ -13,7 +13,7 @@ gdjs.CreditsCode.condition0IsTrue_0 = {val:false};
 gdjs.CreditsCode.condition1IsTrue_0 = {val:false};
 
 
-gdjs.CreditsCode.asyncCallback10630972 = function (runtimeScene, asyncObjectsList) {
+gdjs.CreditsCode.asyncCallback10697372 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("QuitBuffer"), gdjs.CreditsCode.GDQuitBufferObjects2);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
 }{for(var i = 0, len = gdjs.CreditsCode.GDQuitBufferObjects2.length ;i < len;++i) {
@@ -28,7 +28,7 @@ gdjs.CreditsCode.eventsList0 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.CreditsCode.asyncCallback10630972(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.CreditsCode.asyncCallback10697372(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -116,7 +116,7 @@ gdjs.CreditsCode.eventsList0(runtimeScene);} //End of subevents
 
 gdjs.CreditsCode.condition0IsTrue_0.val = false;
 {
-gdjs.CreditsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0)) >= 50;
+gdjs.CreditsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) >= 50;
 }if (gdjs.CreditsCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Tutorial");
 }}
@@ -131,7 +131,7 @@ gdjs.CreditsCode.condition0IsTrue_0.val = false;
 {
 gdjs.CreditsCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Back");
 }if (gdjs.CreditsCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(0).add(1);
+{runtimeScene.getScene().getVariables().getFromIndex(0).add(1);
 }}
 
 }
@@ -152,6 +152,7 @@ gdjs.CreditsCode.GDexitObjects1.length = 0;
 gdjs.CreditsCode.GDexitObjects2.length = 0;
 
 gdjs.CreditsCode.eventsList1(runtimeScene);
+
 return;
 
 }

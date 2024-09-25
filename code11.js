@@ -30,7 +30,7 @@ gdjs.Level2Code.condition3IsTrue_1 = {val:false};
 
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level2Code.GDplayerObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDenemyObjects1Objects = Hashtable.newFrom({"enemy": gdjs.Level2Code.GDenemyObjects1});
-gdjs.Level2Code.asyncCallback10611716 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level2Code.asyncCallback10678396 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("QuitBuffer"), gdjs.Level2Code.GDQuitBufferObjects2);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
 }{for(var i = 0, len = gdjs.Level2Code.GDQuitBufferObjects2.length ;i < len;++i) {
@@ -45,7 +45,7 @@ gdjs.Level2Code.eventsList0 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level2Code.asyncCallback10611716(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level2Code.asyncCallback10678396(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -54,7 +54,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5)
 
 };gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level2Code.GDplayerObjects1});
 gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDfinishObjects1Objects = Hashtable.newFrom({"finish": gdjs.Level2Code.GDfinishObjects1});
-gdjs.Level2Code.asyncCallback10613292 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level2Code.asyncCallback10679732 = function (runtimeScene, asyncObjectsList) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Level3");
 }}
 gdjs.Level2Code.eventsList1 = function(runtimeScene) {
@@ -65,7 +65,7 @@ gdjs.Level2Code.eventsList1 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.Level2Code.asyncCallback10613292(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.Level2Code.asyncCallback10679732(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -308,11 +308,11 @@ gdjs.Level2Code.condition1IsTrue_0.val = false;
 gdjs.Level2Code.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDplayerObjects1Objects, gdjs.Level2Code.mapOfGDgdjs_46Level2Code_46GDfinishObjects1Objects, false, runtimeScene, false);
 }if ( gdjs.Level2Code.condition0IsTrue_0.val ) {
 {
-gdjs.Level2Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0)) == 0;
+gdjs.Level2Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 0;
 }}
 if (gdjs.Level2Code.condition1IsTrue_0.val) {
 /* Reuse gdjs.Level2Code.GDfinishObjects1 */
-{runtimeScene.getVariables().getFromIndex(0).setNumber(1);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(1);
 }{for(var i = 0, len = gdjs.Level2Code.GDfinishObjects1.length ;i < len;++i) {
     gdjs.Level2Code.GDfinishObjects1[i].hide();
 }
@@ -345,6 +345,7 @@ gdjs.Level2Code.GDQuitBufferObjects1.length = 0;
 gdjs.Level2Code.GDQuitBufferObjects2.length = 0;
 
 gdjs.Level2Code.eventsList2(runtimeScene);
+
 return;
 
 }

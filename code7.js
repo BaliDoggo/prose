@@ -32,7 +32,7 @@ gdjs.Level9Code.condition2IsTrue_1 = {val:false};
 gdjs.Level9Code.condition3IsTrue_1 = {val:false};
 
 
-gdjs.Level9Code.asyncCallback10480540 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level9Code.asyncCallback10550620 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("QuitBuffer"), gdjs.Level9Code.GDQuitBufferObjects2);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
 }{for(var i = 0, len = gdjs.Level9Code.GDQuitBufferObjects2.length ;i < len;++i) {
@@ -47,7 +47,7 @@ gdjs.Level9Code.eventsList0 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level9Code.asyncCallback10480540(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level9Code.asyncCallback10550620(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -58,7 +58,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5)
 gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDfinishObjects1Objects = Hashtable.newFrom({"finish": gdjs.Level9Code.GDfinishObjects1});
 gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level9Code.GDplayerObjects1});
 gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDfinishObjects1Objects = Hashtable.newFrom({"finish": gdjs.Level9Code.GDfinishObjects1});
-gdjs.Level9Code.asyncCallback10483404 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level9Code.asyncCallback10553068 = function (runtimeScene, asyncObjectsList) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Level10");
 }}
 gdjs.Level9Code.eventsList1 = function(runtimeScene) {
@@ -69,7 +69,7 @@ gdjs.Level9Code.eventsList1 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Level9Code.asyncCallback10483404(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level9Code.asyncCallback10553068(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -307,11 +307,11 @@ gdjs.Level9Code.condition1IsTrue_0.val = false;
 gdjs.Level9Code.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDplayerObjects1Objects, gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDfinishObjects1Objects, false, runtimeScene, false);
 }if ( gdjs.Level9Code.condition0IsTrue_0.val ) {
 {
-gdjs.Level9Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0)) == 0;
+gdjs.Level9Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 0;
 }}
 if (gdjs.Level9Code.condition1IsTrue_0.val) {
 /* Reuse gdjs.Level9Code.GDfinishObjects1 */
-{runtimeScene.getVariables().getFromIndex(0).setNumber(1);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(1);
 }{for(var i = 0, len = gdjs.Level9Code.GDfinishObjects1.length ;i < len;++i) {
     gdjs.Level9Code.GDfinishObjects1[i].setPosition(28,339);
 }
@@ -331,12 +331,12 @@ gdjs.Level9Code.condition1IsTrue_0.val = false;
 gdjs.Level9Code.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDplayerObjects1Objects, gdjs.Level9Code.mapOfGDgdjs_46Level9Code_46GDfinishObjects1Objects, false, runtimeScene, false);
 }if ( gdjs.Level9Code.condition0IsTrue_0.val ) {
 {
-gdjs.Level9Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0)) == 1;
+gdjs.Level9Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 1;
 }}
 if (gdjs.Level9Code.condition1IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("arrow"), gdjs.Level9Code.GDarrowObjects1);
 /* Reuse gdjs.Level9Code.GDfinishObjects1 */
-{runtimeScene.getVariables().getFromIndex(0).setNumber(2);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(2);
 }{for(var i = 0, len = gdjs.Level9Code.GDfinishObjects1.length ;i < len;++i) {
     gdjs.Level9Code.GDfinishObjects1[i].deleteFromScene(runtimeScene);
 }
@@ -536,6 +536,7 @@ gdjs.Level9Code.GDenemyObjects1.length = 0;
 gdjs.Level9Code.GDenemyObjects2.length = 0;
 
 gdjs.Level9Code.eventsList2(runtimeScene);
+
 return;
 
 }

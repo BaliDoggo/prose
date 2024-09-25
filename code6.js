@@ -19,20 +19,24 @@ gdjs.Level8Code.GDplatform2Objects1= [];
 gdjs.Level8Code.GDplatform2Objects2= [];
 gdjs.Level8Code.GDColliderObjects1= [];
 gdjs.Level8Code.GDColliderObjects2= [];
+gdjs.Level8Code.GDCollider2Objects1= [];
+gdjs.Level8Code.GDCollider2Objects2= [];
 
 gdjs.Level8Code.conditionTrue_0 = {val:false};
 gdjs.Level8Code.condition0IsTrue_0 = {val:false};
 gdjs.Level8Code.condition1IsTrue_0 = {val:false};
 gdjs.Level8Code.condition2IsTrue_0 = {val:false};
 gdjs.Level8Code.condition3IsTrue_0 = {val:false};
+gdjs.Level8Code.condition4IsTrue_0 = {val:false};
 gdjs.Level8Code.conditionTrue_1 = {val:false};
 gdjs.Level8Code.condition0IsTrue_1 = {val:false};
 gdjs.Level8Code.condition1IsTrue_1 = {val:false};
 gdjs.Level8Code.condition2IsTrue_1 = {val:false};
 gdjs.Level8Code.condition3IsTrue_1 = {val:false};
+gdjs.Level8Code.condition4IsTrue_1 = {val:false};
 
 
-gdjs.Level8Code.asyncCallback10445996 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level8Code.asyncCallback10516332 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("QuitBuffer"), gdjs.Level8Code.GDQuitBufferObjects2);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
 }{for(var i = 0, len = gdjs.Level8Code.GDQuitBufferObjects2.length ;i < len;++i) {
@@ -47,7 +51,7 @@ gdjs.Level8Code.eventsList0 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level8Code.asyncCallback10445996(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.Level8Code.asyncCallback10516332(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -56,8 +60,8 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5)
 
 };gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDfinishObjects1Objects = Hashtable.newFrom({"finish": gdjs.Level8Code.GDfinishObjects1});
-gdjs.Level8Code.asyncCallback10447564 = function (runtimeScene, asyncObjectsList) {
-{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "End");
+gdjs.Level8Code.asyncCallback10517668 = function (runtimeScene, asyncObjectsList) {
+{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Level9");
 }}
 gdjs.Level8Code.eventsList1 = function(runtimeScene) {
 
@@ -67,7 +71,7 @@ gdjs.Level8Code.eventsList1 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.Level8Code.asyncCallback10447564(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.Level8Code.asyncCallback10517668(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -78,6 +82,8 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), 
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplatformObjects1Objects = Hashtable.newFrom({"platform": gdjs.Level8Code.GDplatformObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplatform2Objects1Objects = Hashtable.newFrom({"platform2": gdjs.Level8Code.GDplatform2Objects1});
+gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDCollider2Objects1Objects = Hashtable.newFrom({"Collider2": gdjs.Level8Code.GDCollider2Objects1});
+gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDenemyObjects1Objects = Hashtable.newFrom({"enemy": gdjs.Level8Code.GDenemyObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
@@ -86,7 +92,7 @@ gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.n
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplatformObjects1Objects = Hashtable.newFrom({"platform": gdjs.Level8Code.GDplatformObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects = Hashtable.newFrom({"player": gdjs.Level8Code.GDplayerObjects1});
 gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDColliderObjects1Objects = Hashtable.newFrom({"Collider": gdjs.Level8Code.GDColliderObjects1});
-gdjs.Level8Code.asyncCallback10451612 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level8Code.asyncCallback10521324 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("platform"), gdjs.Level8Code.GDplatformObjects2);
 gdjs.copyArray(runtimeScene.getObjects("platform2"), gdjs.Level8Code.GDplatform2Objects2);
 gdjs.copyArray(asyncObjectsList.getObjects("player"), gdjs.Level8Code.GDplayerObjects2);
@@ -113,7 +119,7 @@ gdjs.Level8Code.eventsList2 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 for (const obj of gdjs.Level8Code.GDplayerObjects1) asyncObjectsList.addObject("player", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.Level8Code.asyncCallback10451612(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.Level8Code.asyncCallback10521324(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -341,11 +347,11 @@ gdjs.Level8Code.condition1IsTrue_0.val = false;
 gdjs.Level8Code.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects, gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDfinishObjects1Objects, false, runtimeScene, false);
 }if ( gdjs.Level8Code.condition0IsTrue_0.val ) {
 {
-gdjs.Level8Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0)) == 0;
+gdjs.Level8Code.condition1IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 0;
 }}
 if (gdjs.Level8Code.condition1IsTrue_0.val) {
 /* Reuse gdjs.Level8Code.GDfinishObjects1 */
-{runtimeScene.getVariables().getFromIndex(0).setNumber(1);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(1);
 }{for(var i = 0, len = gdjs.Level8Code.GDfinishObjects1.length ;i < len;++i) {
     gdjs.Level8Code.GDfinishObjects1[i].hide();
 }
@@ -359,6 +365,7 @@ gdjs.Level8Code.eventsList1(runtimeScene);} //End of subevents
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("Collider2"), gdjs.Level8Code.GDCollider2Objects1);
 gdjs.copyArray(runtimeScene.getObjects("platform"), gdjs.Level8Code.GDplatformObjects1);
 gdjs.copyArray(runtimeScene.getObjects("platform2"), gdjs.Level8Code.GDplatform2Objects1);
 gdjs.copyArray(runtimeScene.getObjects("player"), gdjs.Level8Code.GDplayerObjects1);
@@ -366,6 +373,7 @@ gdjs.copyArray(runtimeScene.getObjects("player"), gdjs.Level8Code.GDplayerObject
 gdjs.Level8Code.condition0IsTrue_0.val = false;
 gdjs.Level8Code.condition1IsTrue_0.val = false;
 gdjs.Level8Code.condition2IsTrue_0.val = false;
+gdjs.Level8Code.condition3IsTrue_0.val = false;
 {
 gdjs.Level8Code.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects, gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplatformObjects1Objects, false, runtimeScene, false);
 }if ( gdjs.Level8Code.condition0IsTrue_0.val ) {
@@ -380,9 +388,13 @@ for(var i = 0, k = 0, l = gdjs.Level8Code.GDplatformObjects1.length;i<l;++i) {
 gdjs.Level8Code.GDplatformObjects1.length = k;}if ( gdjs.Level8Code.condition1IsTrue_0.val ) {
 {
 gdjs.Level8Code.condition2IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects, gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplatform2Objects1Objects, true, runtimeScene, false);
+}if ( gdjs.Level8Code.condition2IsTrue_0.val ) {
+{
+gdjs.Level8Code.condition3IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDCollider2Objects1Objects, gdjs.Level8Code.mapOfGDgdjs_46Level8Code_46GDplayerObjects1Objects, true, runtimeScene, false);
 }}
 }
-if (gdjs.Level8Code.condition2IsTrue_0.val) {
+}
+if (gdjs.Level8Code.condition3IsTrue_0.val) {
 /* Reuse gdjs.Level8Code.GDplatformObjects1 */
 {for(var i = 0, len = gdjs.Level8Code.GDplatformObjects1.length ;i < len;++i) {
     gdjs.Level8Code.GDplatformObjects1[i].hide();
@@ -488,8 +500,11 @@ gdjs.Level8Code.GDplatform2Objects1.length = 0;
 gdjs.Level8Code.GDplatform2Objects2.length = 0;
 gdjs.Level8Code.GDColliderObjects1.length = 0;
 gdjs.Level8Code.GDColliderObjects2.length = 0;
+gdjs.Level8Code.GDCollider2Objects1.length = 0;
+gdjs.Level8Code.GDCollider2Objects2.length = 0;
 
 gdjs.Level8Code.eventsList3(runtimeScene);
+
 return;
 
 }
